@@ -1,0 +1,188 @@
+body {
+  padding: 0;
+  spacing: 0;
+  margin: 0;
+}
+
+body, td {
+  font-family: "trebuchet ms",arial,helvetica,sans-serif;
+  font-size: 13px;
+}
+
+
+
+#logo {
+  background-image: url('img/funda-bg.jpg');
+  padding-left:180px;
+  padding-top:5px;
+  margin-bottom: 0px;
+  height: 50px;
+}
+
+span.light {
+  color: gray;
+}
+
+/* Pagination */
+.ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+ul.pagination li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+/* Blauwe balk boven */ 
+#balk { background-color: #73cff7; margin: 0; padding: 0; padding-bottom: 2px; text-align: center; } 
+#balk a { color: #ffffff; text-decoration: none; font-size: 12px; } 
+#balk a.active { color: black; } 
+#balk ul { margin: 0; padding-top: 7px; } 
+#balk li { display: inline; padding-left: 5px; padding-right: 5px; padding-bottom: 2px; background-color: #3280c6; border: solid gray 1px; border-bottom: none; } 
+#balk li.active { background-color: #d6f0fc; }
+
+
+/* navigatiebalk */ 
+#nav { border-bottom: solid gray 1px; margin-bottom: 18px; padding-bottom: 5px; text-align: center; } 
+#nav ul { margin: 0; padding-top: 4px; } 
+#nav li { display: inline; margin: 3px; padding-left: 3px; padding-right: 3px; } 
+#nav a { color: gray; text-decoration: none; } 
+#nav a:hover, #nav a.active { color: black; border-bottom: solid gray 4px; } 
+#nav a.active { font-weight: bold; } 
+
+#txt { margin-left: 10%; font-size: 24px; color: #990000; margin-top: 30px; margin-bottom: 30px; } 
+
+#main { margin-left: 10%; width: 400px; height: 200px; } 
+#main a.normal { text-decoration: underline; font-size: 14px; color: #5d66cc; } 
+#main ul { margin: 0; padding-top: 7px; } 
+#main li { display: inline; padding-left: 5px; padding-right: 5px; background-color: #e8e7e7; border: solid gray 1px; } 
+#main li.active { background-color: white; border-bottom: none; padding-bottom: 1px; } 
+
+a.licht { text-decoration: none; color: dimgray; font-size: 12px; } 
+a.licht:hover, a.active { color: black; } 
+
+#zoeken { border: solid gray 1px; padding: 20px; } 
+
+/* OVERZICHTSPAGINA */
+
+#data {
+  padding-right: 30px;
+  white-space: nowrap;
+}
+
+#data div.head {
+  color: #990000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#data div.content {
+  margin-bottom: 10px; 
+}
+
+div.huisdata {
+  width: 500px;
+  padding-bottom: 10px;
+  border-bottom: solid gray 1px;
+}
+
+
+div.huisdata div.head {
+}
+
+div.huisdata div.prijs {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  text-align: right;
+  float: right;
+  margin-top: -14px;
+}
+
+div.huisdata span.adres {
+  color: dimgray;
+}
+
+
+a.makelaar {
+  color: green;
+  text-decoration: none;
+}
+
+a.makelaar:hover {
+  text-decoration: underline;
+}
+
+
+/* DETAILPAGINA */
+
+#details {
+  margin-top: 20px;
+  width: 600px;
+}
+
+#details ul{
+  background-color: #e0f3ff;
+}
+
+#content { 
+  border: solid #e0f3ff 5px;
+  padding: 20px;
+}
+
+#data {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#adresgegevens div.head {
+  padding-top: 24px;
+  color: #990000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#data div.adres {
+}
+
+#data div.prijs {
+  font-weight: bold;
+}
+
+table#kenmerken {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table#kenmerken th {
+  background-color: #eeeeee;
+  font-size: 14px;
+  color: dimgray;
+  text-align: left;
+}
+
+table#kenmerken td {
+  width: 50%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: solid gray 1px;
+}
+
+table#kenmerken td.kop {
+  color: dimgray;
+}
