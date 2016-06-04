@@ -76,10 +76,10 @@ if (empty($_GET['WOID'])) {
         <div id="details">
         <ul>
             <li><a href="detail.php" class="active">Overzicht</a></li>
-            <li><a href="omschrijving.php?<?=$huis['WOID']?>" class="licht">Omschrijving</a></li>
+            <li><a href="omschrijving.php?WOID=<?=$huis['WOID']?>" class="licht">Omschrijving</a></li>
             <li><a href="detail.php?WOID=<?=$huis['WOID']?>&detailsOnly=true" class="licht">Kenmerken</a></li>
-            <li><a href="hypotheek.php<?=$huis['WOID']?>" class="licht">Hypotheek</a></li>
-            <li><a href="afspraak.php<?=$huis['WOID']?>" class="licht">Afspraak makelaar</a></li>
+            <li><a href="hypotheek.php?WOID=<?=$huis['WOID']?>" class="licht">Hypotheek</a></li>
+            <li><a href="afspraak.php?WOID=<?=$huis['WOID']?>" class="licht">Afspraak makelaar</a></li>
 
         </ul>
 

@@ -8,9 +8,9 @@ if(!empty($_SESSION['SortingVals'])) {
 try {
     $select = "SELECT WOID, Vraagprijs, wo.Address AS Address, soortvraagprijs.Name AS Vraagprijs_soort, wo.City AS City, WoonOppervlakte, AantalKamers, mkantoor.Name AS Makelaar_naam, wo.PC AS PC ";
     $sql = "FROM wo
-              INNER JOIN mkantoor
+              left JOIN mkantoor
                 ON wo.MKID =mkantoor.MKID
-              INNER JOIN soortvraagprijs
+              left JOIN soortvraagprijs
                 ON wo.Vraagprijssoort = soortvraagprijs.ID";
 
     $_POST = $_SESSION['SortingVals'];
@@ -25,9 +25,9 @@ try {
         $params[':postcode'] = $_POST['postcode'];
     }
 
-    if (!empty($_POST['city'])) {
+    if (!empty($_POST['plaatsnaam'])) {
         $wheres[] = 'wo.City LIKE :city';
-        $params[':city'] = $_POST['city'];
+        $params[':city'] = $_POST['plaatsnaam'];
     }
 
     if(!empty($_POST['minPrijs'])) {
@@ -71,6 +71,8 @@ try {
     $page = $_GET['page']??0;
     require_once 'DatabaseConnection.php';
     $limiting=' LIMIT 15 OFFSET '.(15*$page);
+    echo $select.$sql.$limiting;
+    print_r($params);
     $statement = DatabaseConnection::getConnection()->prepare($select.$sql.$limiting);
 
     if ($statement->execute($params)) {
@@ -82,7 +84,6 @@ try {
 
     $count = 'select count(*) as xount ';
     $statement = DatabaseConnection::getConnection()->prepare($count.$sql);
-
     if ($statement->execute($params)) {
         $count = $statement->fetchColumn(0);
     } else {
@@ -106,6 +107,8 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
+
+require_once 'Helper.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -159,22 +162,12 @@ try {
                     </div>
                     <div class="head">Soort object</div>
                     <div class="content">
-                        <select name="object">
-                            <option></option>
-                            <?php foreach ($objects as $id => $name): ?>
-                            <option value="<?=$id?>" <?=(!empty($_POST['object']) && $_POST['object']==$id)?'selected':''?>><?=$name?></option>
-                            <?php endforeach; ?>
-                        </select>
+                        <?=Helper::getDropDown("object", $objects??[], $_POST['object']??'');?>
                     </div>
 
                     <div class="head">Soort bouw:</div>
                     <div class="content">
-                        <select name="bouw">
-                            <option></option>
-                            <?php foreach ($bouw as $id=> $name):?>
-                                <option value="<?=$id?>" <?=!empty($_POST['bouw']) && ($_POST['bouw']==$id)?'selected':''?>><?=$name?></option>
-                            <?php endforeach; ?>
-                        </select>
+                        <?=Helper::getDropDown('bouw', $bouw??[], $_POST['bouw']??'');?>
                     </div>
 
                     <div class="head">Aantal kamers</div>
@@ -215,21 +208,7 @@ try {
             <tr>
                 <td></td>
                 <td>
-                    <ul class="pagination">
-                        <?php if (!empty($_GET['page'])) {
-                            if($_GET['page'] > 1) { ?>
-                                <li><a href="overzicht.php?page=<?=$_GET['page']-1?>"><<</a></li>
-                            <?php }
-                        }?>
-                        <?php for($i = 0; $i<ceil($count/15); $i++): ?>
-                            <li><a href="overzicht.php?page=<?=$i?>" <?=($i==($_GET['page']??0)?'class="active"':'')?>><?=$i?></a></li>
-                        <?php endfor; ?>
-                        <?php if (!empty($_GET['page'])) {
-                            if($_GET['page'] < $maxPage) { ?>
-                                <li><a href="overzicht.php?page=<?=$_GET['page']+1?>">>></a></li>
-                            <?php }
-                        }?>
-                    </ul>
+                    <?=Helper::getPagination('overzicht.php?page=', $count/15, $_GET['page']??0, 5);?>
                 </td>
             </tr>
         </table>

@@ -30,7 +30,7 @@ span.light {
   margin: 0;
 }
 
-ul.pagination li {display: inline;}
+ul.pagination li {display: none;}
 
 ul.pagination li a {
   color: black;
