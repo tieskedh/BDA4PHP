@@ -41,6 +41,7 @@ if (empty($_GET['WOID'])) {
             WHERE afspraak.MKMDWID IS NULL
                   AND wo.WOID = :woid
             GROUP BY date, sessie_id
+            ORDER BY date, sessie_id
             LIMIT 5";
     require_once 'DatabaseConnection.php';
     require_once "Helper.php";

@@ -22,442 +22,440 @@
       <table id="13" parent="1" name="sessies">
         <comment>De verschillende sessies</comment>
       </table>
-      <routine id="14" parent="1" name="GetCrustSizes">
-        <routine-kind>PROCEDURE</routine-kind>
-      </routine>
-      <column id="15" parent="2" name="ID">
+      <column id="14" parent="2" name="ID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="16" parent="2" name="Name">
+      <column id="15" parent="2" name="Name">
         <data-type>varchar(25)</data-type>
       </column>
-      <key id="17" parent="2" name="PRIMARY">
+      <key id="16" parent="2" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="18" parent="3" name="MKID">
+      <column id="17" parent="3" name="MKID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="19" parent="3" name="Name">
+      <column id="18" parent="3" name="Name">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="20" parent="3" name="Address">
+      <column id="19" parent="3" name="Address">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="21" parent="3" name="PC">
+      <column id="20" parent="3" name="PC">
         <data-type>varchar(7)</data-type>
       </column>
-      <column id="22" parent="3" name="City">
+      <column id="21" parent="3" name="City">
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="23" parent="3" name="Phone">
+      <column id="22" parent="3" name="Phone">
         <data-type>varchar(15)</data-type>
       </column>
-      <key id="24" parent="3" name="PRIMARY">
+      <key id="23" parent="3" name="PRIMARY">
         <columns>MKID</columns>
         <primary>1</primary>
       </key>
-      <column id="25" parent="4" name="MKMDWID">
+      <column id="24" parent="4" name="MKMDWID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="26" parent="4" name="MKID">
+      <column id="25" parent="4" name="MKID">
         <data-type>int(11)</data-type>
       </column>
-      <column id="27" parent="4" name="Name">
+      <column id="26" parent="4" name="Name">
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="28" parent="4" name="User">
+      <column id="27" parent="4" name="User">
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="29" parent="4" name="Pwd">
+      <column id="28" parent="4" name="Pwd">
         <data-type>varchar(25)</data-type>
       </column>
-      <index id="30" parent="4" name="FK_mkantoormdw_mkantoor">
+      <index id="29" parent="4" name="FK_mkantoormdw_mkantoor">
         <columns>MKID</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="31" parent="4" name="PRIMARY">
+      <key id="30" parent="4" name="PRIMARY">
         <columns>MKMDWID</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="32" parent="4" name="FK_mkantoormdw_mkantoor">
+      <foreign-key id="31" parent="4" name="FK_mkantoormdw_mkantoor">
         <columns>MKID</columns>
         <ref-key>~.mkantoor.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="33" parent="5" name="ID">
+      <column id="32" parent="5" name="ID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="34" parent="5" name="Name">
+      <column id="33" parent="5" name="Name">
         <data-type>varchar(20)</data-type>
       </column>
-      <key id="35" parent="5" name="PRIMARY">
+      <key id="34" parent="5" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="36" parent="6" name="ID">
+      <column id="35" parent="6" name="ID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="37" parent="6" name="Name">
+      <column id="36" parent="6" name="Name">
         <data-type>varchar(15)</data-type>
       </column>
-      <key id="38" parent="6" name="PRIMARY">
+      <key id="37" parent="6" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="39" parent="7" name="ID">
+      <column id="38" parent="7" name="ID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="40" parent="7" name="Name">
+      <column id="39" parent="7" name="Name">
         <data-type>varchar(8)</data-type>
       </column>
-      <key id="41" parent="7" name="PRIMARY">
+      <key id="40" parent="7" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="42" parent="8" name="Id">
+      <column id="41" parent="8" name="Id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="43" parent="8" name="Name">
+      <column id="42" parent="8" name="Name">
         <data-type>varchar(50)</data-type>
       </column>
-      <key id="44" parent="8" name="PRIMARY">
+      <key id="43" parent="8" name="PRIMARY">
         <columns>Id</columns>
         <primary>1</primary>
       </key>
-      <column id="45" parent="9" name="Id">
+      <column id="44" parent="9" name="Id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="46" parent="9" name="Name">
+      <column id="45" parent="9" name="Name">
         <data-type>varchar(50)</data-type>
       </column>
-      <key id="47" parent="9" name="PRIMARY">
+      <key id="46" parent="9" name="PRIMARY">
         <columns>Id</columns>
         <primary>1</primary>
       </key>
-      <column id="48" parent="10" name="ID">
+      <column id="47" parent="10" name="ID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="49" parent="10" name="Name">
+      <column id="48" parent="10" name="Name">
         <data-type>varchar(50)</data-type>
       </column>
-      <key id="50" parent="10" name="PRIMARY">
+      <key id="49" parent="10" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="51" parent="11" name="WOID">
+      <column id="50" parent="11" name="WOID">
         <mandatory>1</mandatory>
         <data-type>varchar(64)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="52" parent="11" name="MKID">
+      <column id="51" parent="11" name="MKID">
         <data-type>int(11)</data-type>
       </column>
-      <column id="53" parent="11" name="Address">
+      <column id="52" parent="11" name="Address">
         <data-type>varchar(1000)</data-type>
       </column>
-      <column id="54" parent="11" name="PC">
+      <column id="53" parent="11" name="PC">
         <data-type>varchar(7)</data-type>
       </column>
-      <column id="55" parent="11" name="City">
+      <column id="54" parent="11" name="City">
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="56" parent="11" name="Vraagprijs">
+      <column id="55" parent="11" name="Vraagprijs">
         <data-type>float</data-type>
       </column>
-      <column id="57" parent="11" name="Vraagprijssoort">
+      <column id="56" parent="11" name="Vraagprijssoort">
         <data-type>int(11)</data-type>
       </column>
-      <column id="58" parent="11" name="SoortObject">
+      <column id="57" parent="11" name="SoortObject">
         <data-type>int(11)</data-type>
       </column>
-      <column id="59" parent="11" name="SoortWoning">
+      <column id="58" parent="11" name="SoortWoning">
         <data-type>int(11)</data-type>
       </column>
-      <column id="60" parent="11" name="TypeWoning">
+      <column id="59" parent="11" name="TypeWoning">
         <data-type>int(11)</data-type>
       </column>
-      <column id="61" parent="11" name="SoortBouw">
+      <column id="60" parent="11" name="SoortBouw">
         <data-type>int(11)</data-type>
       </column>
-      <column id="62" parent="11" name="Omschrijving">
+      <column id="61" parent="11" name="Omschrijving">
         <data-type>text</data-type>
       </column>
-      <column id="63" parent="11" name="BouwJaar">
+      <column id="62" parent="11" name="BouwJaar">
         <data-type>int(11)</data-type>
       </column>
-      <column id="64" parent="11" name="Ligging1">
+      <column id="63" parent="11" name="Ligging1">
         <data-type>int(11)</data-type>
       </column>
-      <column id="65" parent="11" name="Ligging2">
+      <column id="64" parent="11" name="Ligging2">
         <data-type>int(11)</data-type>
       </column>
-      <column id="66" parent="11" name="Ligging3">
+      <column id="65" parent="11" name="Ligging3">
         <data-type>int(11)</data-type>
       </column>
-      <column id="67" parent="11" name="Ligging4">
+      <column id="66" parent="11" name="Ligging4">
         <data-type>int(11)</data-type>
       </column>
-      <column id="68" parent="11" name="Ligging5">
+      <column id="67" parent="11" name="Ligging5">
         <data-type>int(11)</data-type>
       </column>
-      <column id="69" parent="11" name="Ligging6">
+      <column id="68" parent="11" name="Ligging6">
         <data-type>int(11)</data-type>
       </column>
-      <column id="70" parent="11" name="Ligging7">
+      <column id="69" parent="11" name="Ligging7">
         <data-type>int(11)</data-type>
       </column>
-      <column id="71" parent="11" name="Ligging8">
+      <column id="70" parent="11" name="Ligging8">
         <data-type>int(11)</data-type>
       </column>
-      <column id="72" parent="11" name="TuinAanwezig">
+      <column id="71" parent="11" name="TuinAanwezig">
         <data-type>tinyint(1)</data-type>
       </column>
-      <column id="73" parent="11" name="TuinOppervlakte">
+      <column id="72" parent="11" name="TuinOppervlakte">
         <data-type>float</data-type>
       </column>
-      <column id="74" parent="11" name="Status">
+      <column id="73" parent="11" name="Status">
         <data-type>int(11)</data-type>
       </column>
-      <column id="75" parent="11" name="WoonOppervlakte">
+      <column id="74" parent="11" name="WoonOppervlakte">
         <data-type>float</data-type>
       </column>
-      <column id="76" parent="11" name="Inhoud">
+      <column id="75" parent="11" name="Inhoud">
         <data-type>float</data-type>
       </column>
-      <column id="77" parent="11" name="AantalKamers">
+      <column id="76" parent="11" name="AantalKamers">
         <data-type>int(11)</data-type>
       </column>
-      <column id="78" parent="11" name="AantalBadkamers">
+      <column id="77" parent="11" name="AantalBadkamers">
         <data-type>int(11)</data-type>
       </column>
-      <column id="79" parent="11" name="AantalWoonlagen">
+      <column id="78" parent="11" name="AantalWoonlagen">
         <data-type>int(11)</data-type>
       </column>
-      <column id="80" parent="11" name="PerceelOppervlakte">
+      <column id="79" parent="11" name="PerceelOppervlakte">
         <data-type>float</data-type>
       </column>
-      <column id="81" parent="11" name="PlaatsingDatum">
+      <column id="80" parent="11" name="PlaatsingDatum">
         <data-type>date</data-type>
       </column>
-      <column id="82" parent="11" name="new_column">
+      <column id="81" parent="11" name="new_column">
         <data-type>int(11)</data-type>
       </column>
-      <index id="83" parent="11" name="FK_wo_l1">
+      <index id="82" parent="11" name="FK_wo_l1">
         <columns>Ligging1</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="84" parent="11" name="FK_wo_l2">
+      <index id="83" parent="11" name="FK_wo_l2">
         <columns>Ligging2</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="85" parent="11" name="FK_wo_l3">
+      <index id="84" parent="11" name="FK_wo_l3">
         <columns>Ligging3</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="86" parent="11" name="FK_wo_l4">
+      <index id="85" parent="11" name="FK_wo_l4">
         <columns>Ligging4</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="87" parent="11" name="FK_wo_l5">
+      <index id="86" parent="11" name="FK_wo_l5">
         <columns>Ligging5</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="88" parent="11" name="FK_wo_l6">
+      <index id="87" parent="11" name="FK_wo_l6">
         <columns>Ligging6</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="89" parent="11" name="FK_wo_l7">
+      <index id="88" parent="11" name="FK_wo_l7">
         <columns>Ligging7</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="90" parent="11" name="FK_wo_l8">
+      <index id="89" parent="11" name="FK_wo_l8">
         <columns>Ligging8</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="91" parent="11" name="FK_wo_mk">
+      <index id="90" parent="11" name="FK_wo_mk">
         <columns>MKID</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="92" parent="11" name="FK_wo_sb">
+      <index id="91" parent="11" name="FK_wo_sb">
         <columns>SoortBouw</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="93" parent="11" name="FK_wo_so">
+      <index id="92" parent="11" name="FK_wo_so">
         <columns>SoortObject</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="94" parent="11" name="FK_wo_st">
+      <index id="93" parent="11" name="FK_wo_st">
         <columns>Status</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="95" parent="11" name="FK_wo_sw">
+      <index id="94" parent="11" name="FK_wo_sw">
         <columns>SoortWoning</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="96" parent="11" name="FK_wo_tw">
+      <index id="95" parent="11" name="FK_wo_tw">
         <columns>TypeWoning</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="97" parent="11" name="FK_wo_vps">
+      <index id="96" parent="11" name="FK_wo_vps">
         <columns>Vraagprijssoort</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="98" parent="11" name="PRIMARY">
+      <key id="97" parent="11" name="PRIMARY">
         <columns>WOID</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="99" parent="11" name="FK_wo_l1">
+      <foreign-key id="98" parent="11" name="FK_wo_l1">
         <columns>Ligging1</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="100" parent="11" name="FK_wo_l2">
+      <foreign-key id="99" parent="11" name="FK_wo_l2">
         <columns>Ligging2</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="101" parent="11" name="FK_wo_l3">
+      <foreign-key id="100" parent="11" name="FK_wo_l3">
         <columns>Ligging3</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="102" parent="11" name="FK_wo_l4">
+      <foreign-key id="101" parent="11" name="FK_wo_l4">
         <columns>Ligging4</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="103" parent="11" name="FK_wo_l5">
+      <foreign-key id="102" parent="11" name="FK_wo_l5">
         <columns>Ligging5</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="104" parent="11" name="FK_wo_l6">
+      <foreign-key id="103" parent="11" name="FK_wo_l6">
         <columns>Ligging6</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="105" parent="11" name="FK_wo_l7">
+      <foreign-key id="104" parent="11" name="FK_wo_l7">
         <columns>Ligging7</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="106" parent="11" name="FK_wo_l8">
+      <foreign-key id="105" parent="11" name="FK_wo_l8">
         <columns>Ligging8</columns>
         <ref-key>~.ligging.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="107" parent="11" name="FK_wo_mk">
+      <foreign-key id="106" parent="11" name="FK_wo_mk">
         <columns>MKID</columns>
         <ref-key>~.mkantoor.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="108" parent="11" name="FK_wo_sb">
+      <foreign-key id="107" parent="11" name="FK_wo_sb">
         <columns>SoortBouw</columns>
         <ref-key>~.soortbouw.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="109" parent="11" name="FK_wo_so">
+      <foreign-key id="108" parent="11" name="FK_wo_so">
         <columns>SoortObject</columns>
         <ref-key>~.soortobject.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="110" parent="11" name="FK_wo_st">
+      <foreign-key id="109" parent="11" name="FK_wo_st">
         <columns>Status</columns>
         <ref-key>~.status.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="111" parent="11" name="FK_wo_sw">
+      <foreign-key id="110" parent="11" name="FK_wo_sw">
         <columns>SoortWoning</columns>
         <ref-key>~.soortwoning.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="112" parent="11" name="FK_wo_tw">
+      <foreign-key id="111" parent="11" name="FK_wo_tw">
         <columns>TypeWoning</columns>
         <ref-key>~.typewoning.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="113" parent="11" name="FK_wo_vps">
+      <foreign-key id="112" parent="11" name="FK_wo_vps">
         <columns>Vraagprijssoort</columns>
         <ref-key>~.soortvraagprijs.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="114" parent="12" name="afspraak_id">
+      <column id="113" parent="12" name="afspraak_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="115" parent="12" name="MKMDWID">
+      <column id="114" parent="12" name="MKMDWID">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="116" parent="12" name="WOID">
+      <column id="115" parent="12" name="WOID">
         <mandatory>1</mandatory>
         <data-type>varchar(64)</data-type>
       </column>
-      <column id="117" parent="12" name="sessie">
+      <column id="116" parent="12" name="sessie">
         <data-type>int(11)</data-type>
       </column>
-      <column id="118" parent="12" name="datum">
+      <column id="117" parent="12" name="datum">
         <data-type>date</data-type>
       </column>
-      <index id="119" parent="12" name="MKMDWID">
+      <index id="118" parent="12" name="MKMDWID">
         <columns>MKMDWID</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="120" parent="12" name="WOID">
+      <index id="119" parent="12" name="WOID">
         <columns>WOID</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="121" parent="12" name="PRIMARY">
+      <key id="120" parent="12" name="PRIMARY">
         <columns>afspraak_id</columns>
         <primary>1</primary>
       </key>
-      <column id="122" parent="13" name="sessie_id">
+      <column id="121" parent="13" name="sessie_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
-      <column id="123" parent="13" name="start">
+      <column id="122" parent="13" name="start">
         <data-type>time</data-type>
       </column>
-      <column id="124" parent="13" name="end">
+      <column id="123" parent="13" name="end">
         <data-type>time</data-type>
       </column>
-      <key id="125" parent="13" name="PRIMARY">
+      <key id="124" parent="13" name="PRIMARY">
         <columns>sessie_id</columns>
         <primary>1</primary>
       </key>
